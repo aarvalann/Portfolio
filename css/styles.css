@@ -1,0 +1,439 @@
+body {
+  border: 0;
+  background-color: #0b192e;
+  color: #8892af;
+  text-align: center;
+  line-height: 2rem;
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+h4[class="name"], h5[class="name"] {
+  margin-bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #63fed9;
+}
+
+a:visited {
+  color: inherit;
+}
+
+li.content-list-item {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: normal;
+  line-height: 1;
+}
+
+li.content-list-item::before {
+  content: "▹";
+  position: absolute;
+  left: 0;
+  color: #63fed9;
+  line-height: 1;
+  font-size: normal;
+}
+
+footer {
+  line-height: 0.5;
+  font-size: small;
+  font-family: 'Red Hat Mono', monospace;
+  padding-bottom: 2rem;
+}
+
+/******************************************************************************/
+#root {
+  display: grid;
+}
+
+#welcome {
+  width: 65%;
+  right: 17.5%;
+  text-align: left;
+  padding-top: 4rem;
+  padding-bottom: 18rem;
+  margin: auto;
+}
+
+#intro {
+  position: relative;
+  width: 70%;
+  margin: auto auto 10rem auto;
+  text-align: left;
+  padding-bottom: 12rem;
+}
+
+#experience {
+  position: relative;
+  width: 55%;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 12rem;
+  margin-bottom: 6rem;
+}
+
+#education {
+  position: relative;
+  width: 55%;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 12rem;
+}
+
+#hobbies {
+  position: relative;
+  width: 55%;
+  margin: auto;
+  text-align: left;
+  padding-bottom: 12rem;
+  margin-bottom: 10rem;
+}
+
+#contact-me {
+  position: relative;
+  width: 55%;
+  margin: auto;
+  display: block;
+  text-align: center;
+  padding-bottom: 14rem;
+}
+
+/******************************************************************************/
+.name {
+  color: #ccd6f6;
+}
+
+.style-text {
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  font-size: large;
+  letter-spacing: 2px;
+}
+
+.glow {
+  color: #63fed9;
+}
+
+.logo {
+  height: 60px;
+  width: 70px;
+  position: fixed;
+  top: 2rem;
+  left: 1.5rem;
+}
+
+.short-intro {
+  width: 60%;
+}
+
+.nav {
+  padding-bottom: 6rem;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 3rem;
+  top: 2rem;
+}
+
+.nav-links ol {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  list-style: none;
+  justify-content: space-between;
+  margin-right: 2rem;
+}
+
+.nav-links ol li {
+  margin: 0 0.3rem;
+  position: relative;
+  counter-increment: item 1;
+  font-size: small;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+.nav-links ol li a {
+  text-decoration: none;
+  padding: 10px;
+}
+
+.nav-links ol li a::before {
+  content: "0"counter(item) ".";
+  margin-right: 5px;
+  color: #63fed9;
+  font-size: small;
+  text-align: right;
+}
+
+.nav-links ol li a:hover {
+  color: #63fed9;
+}
+
+.nav-links .btn {
+  padding:5px 30px;
+}
+
+.detailed-intro {
+  width: 60%;
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.photo-cover {
+  height: 19rem;
+  float: right;
+  width: 30%;
+  background: #63fed9;
+  border-radius: 50%;
+}
+
+.photo {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  transition: width 1s;
+  transition: opacity 0.5s;
+  opacity: 0.6;
+}
+
+img.photo:hover {
+  opacity: 1;
+}
+
+.div-name {
+  display: inline-block;
+  width: 70%;
+}
+
+.div-index {
+  font-family: 'Red Hat Mono', monospace;
+  margin-right: 1rem;
+}
+
+.hr-line {
+  letter-spacing: 0.001px;
+  margin-left: 2rem;
+  font-size: normal;
+  color: #8892af;
+}
+
+.skills-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(140px, 200px));
+  gap: 0;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  list-style: none;
+  width: 50%;
+  margin: 0;
+}
+
+.certifications-list {
+  padding: 1.5rem 0;
+  list-style: none;
+  margin: 0;
+}
+
+.responsibilities-list {
+  display: grid;
+  padding: 1.5rem 0;
+  overflow: hidden;
+  list-style: none;
+  margin: 0;
+}
+
+.tablist {
+  position: relative;
+  list-style: none;
+  width: max-content;
+  padding: 0;
+  margin: 0;
+}
+
+div[class*="-tabs"] {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  overflow: hidden;
+}
+
+div[class*="-tabs"] [class$="-tab"] label {
+  cursor: pointer;
+  display: block;
+  font-size: 1.1em;
+  font-weight: 300;
+  line-height: 1em;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+div[class*="-tabs"] [class$="-tab"] [type="radio"] {
+  border-bottom: 1px solid #8892af;
+  cursor: pointer;
+  appearance: none;
+  display: block;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+}
+
+div[class*="-tabs"] [class$="-tab"] [type="radio"]:hover, div[class*="-tabs"] [class$="-tab"] [type="radio"]:focus {
+  border-bottom: 1px solid #63fed9;
+}
+
+div[class*="-tabs"] [class$="-tab"] [type="radio"]:checked {
+  border-bottom: 2px solid #63fed9;
+  color: #63fed9;
+}
+
+div[class*="-tabs"] [class$="-tab"] [type="radio"]:checked+label {
+  color: #63fed9;
+}
+
+div[class*="-tabs"] [class$="-tab"] [type="radio"]:checked+div {
+  opacity: 1;
+}
+
+div[class*="-tabs"] [class$="-tab"] [type="radio"]+div {
+  display: block;
+  opacity: 0;
+  padding: 2rem 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.job-tabs .job-tab {
+  width: 25%;
+}
+
+.job-tabs .job-tab [type="radio"]+div {
+  width: 400%;
+  margin-left: 200%;
+}
+
+.education-tabs .education-tab,
+.hobbies-tabs .hobbies-tab {
+  width: 33.3%;
+}
+
+.education-tabs .education-tab [type="radio"]+div,
+.hobbies-tabs .hobbies-tab [type="radio"]+div {
+  width: 300%;
+  margin-left: 200%;
+}
+
+div[class*="-tabs"] [class$="-tab"] [type="radio"]:checked+div {
+  margin-left: 0;
+}
+
+div[class*="-tabs"] [class$="-tab"]:not(:first-child) [type="radio"]+div {
+  margin-left: 100%;
+}
+
+div[class*="-tabs"] [class$="-tab"]:nth-child(2) [type="radio"]:checked+div {
+  margin-left: -100%;
+}
+
+div[class*="-tabs"] [class$="-tab"]:nth-child(3) [type="radio"]:checked+div {
+  margin-left: -200%;
+}
+
+div[class*="-tabs"] [class$="-tab"]:nth-child(4) [type="radio"]:checked+div {
+  margin-left: -300%;
+}
+
+.period {
+  margin-top: 0;
+}
+
+.btn {
+  border-radius: 8px;
+  font-family: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+  color: #63fed9 !important;
+  font-size: small;
+  padding: 15px 40px 15px 40px;
+  border: solid #63fed9 2px;
+  text-decoration: none;
+}
+
+.btn:hover {
+  background: rgba(100, 255, 218, 0.1);
+  text-decoration: none;
+}
+
+.div-right {
+  position: fixed;
+  bottom: 0;
+  right: 3rem;
+  font-family: 'Red Hat Mono', monospace;
+  font-size: normal;
+}
+
+.div-left {
+  position: fixed;
+  bottom: 0;
+  left: 3rem;
+}
+
+.right-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.right-mail {
+  writing-mode: vertical-rl;
+  padding: 10px;
+  line-height: 18px;
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.right-mail:hover, .right-mail:focus {
+  transform: translateY(-3px);
+  color: #63fed9 !important;
+}
+
+.left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.vertical {
+  display: list-item;
+  height: 7rem;
+  border-color: #8892af;
+}
+
+.left-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.left-list li {
+  transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.social-media {
+  height: 25px;
+  width: 25px;
+  padding: 25px 0;
+}
+
+.left-list li:hover {
+  transform: translateY(-3px);
+  background-color: #8892af;
+  border: solid 1.5px #63fed9
+}
